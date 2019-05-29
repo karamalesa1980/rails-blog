@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
-
+# Вывод всех статей
   def index
     @articles = Article.all
   end
 
 
-
+# Просмотр одной статии
   def show
      @article = Article.find(params[:id]) 
   end  
@@ -21,6 +21,14 @@ class ArticlesController < ApplicationController
     else
       render action: 'new'
     end   
+  end
+
+  def edit
+    @article = Article.find(params[:id]) 
+  end
+
+  def update
+    
   end
 
   

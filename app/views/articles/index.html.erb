@@ -10,9 +10,10 @@
 	<p>
 		<%= article.text %>
 	</p>
-	<hr>
+	
 	<p>
-		Добавлено:  <%= article.created_at %>
+		<%= link_to 'show', article_path(article) %> |
+		<%= link_to 'edit', edit_article_path(article) %>
 	</p>
 	<hr>
 <% end %>	

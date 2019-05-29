@@ -1,6 +1,17 @@
-<h1>Все статьи!</h1>
 
-<h2><%= @article.title %></h2>
+
+<h2>
+	<%= @article.title %>
+</h2>
+
+<hr>
+
 <p>
 	<%= @article.text %>
+</p>
+
+<hr>
+
+<p>
+	Дата публикации:  <%= @article.created_at%>
 </p>

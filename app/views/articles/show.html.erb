@@ -15,3 +15,7 @@
 <p>
 	Дата публикации:  <%= @article.created_at%>
 </p>
+<p>
+	<%= link_to 'Все статьи', articles_path(@articles) %> |
+	<%= link_to 'Редактировать', edit_article_path(@article) %>
+</p>

@@ -4,10 +4,9 @@
 	</p>
 <h1>Все статьи:</h1>
 
+
 <% @articles.each do |article| %>
-	<h3>
-		<%= article.id %>) Статья
-	</h3>
+	
 	<h2>
 		<%= article.title %>
 	</h2>
@@ -16,8 +15,9 @@
 	</p>
 	
 	<p>
-		<%= link_to 'Просмотр', article_path(article) %> |
-		<%= link_to 'Редактировать', edit_article_path(article) %>
+		<%= link_to 'Просмотр', article_path(article) %>
+		
+		
 	</p>
 	<hr>
-<% end %>	
+<% end %>	 

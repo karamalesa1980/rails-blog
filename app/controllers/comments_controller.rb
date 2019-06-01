@@ -4,8 +4,9 @@ class CommentsController < ApplicationController
     @article.comments.create(comment_params)
 
 
-    redirect_to new_article_path 
+    redirect_to @article
   end
+  
 
 
   private

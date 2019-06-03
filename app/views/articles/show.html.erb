@@ -40,9 +40,9 @@
 <% end %>
 
 <% @article.comments.each do |comment| %>
-	<h2>
-		<%= comment.author %>
-	</h2>
+	<p>
+		<i><%= comment.author %>: прокомнтировал(а)</i>
+	</p>
 	<p>
 		
 		<%= comment.body %>

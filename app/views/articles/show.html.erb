@@ -21,6 +21,10 @@
 	<%= link_to 'Удалить', article_path(@article), method: :delete, data: { confirm: 'Вы уверены?'} %> 
 </p>
 
+<h2>
+	Добавить коментарий!
+</h2>
+
 <%= form_for([@article, @article.comments.build]) do |f| %>
 	
 	<p>
@@ -38,6 +42,8 @@
 		<%= f.submit "Опубликовать" %>
 	</p>
 <% end %>
+
+
 
 <% @article.comments.each do |comment| %>
 	<p>

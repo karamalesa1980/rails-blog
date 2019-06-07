@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+
+  before_action :authenticate_user!, except: [:show, :index]
 # Вывод всех статей
   def index
     @articles = Article.all

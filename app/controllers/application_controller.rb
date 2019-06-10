@@ -8,3 +8,4 @@ class ApplicationController < ActionController::Base
     request.referrer
   end
 end
+ 

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+   before_action :authenticate_user!, except: [:show, :index]
 
 # Вывод всех статей
   def index
@@ -36,11 +37,11 @@ class ArticlesController < ApplicationController
     end
   end
   def destroy
-  @article = Article.find(params[:id])
-  @article.destroy
-
-  redirect_to articles_path
-end
+    @article = Article.find(params[:id])
+    @article.destroy
+    
+    redirect_to articles_path
+  end
 
   
 

@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
 
 
     redirect_to @article
+
+    
   end
   
   def destroy

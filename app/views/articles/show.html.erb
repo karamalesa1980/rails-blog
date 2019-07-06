@@ -30,7 +30,9 @@
 	<p>
 		
 		<%= f.label :author %>:
-		<%= current_user.username %>
+		<% if user_signed_in? %>
+		<%= current_user.username  %>
+		<% end %>
 	</p>
 	<p>
 		

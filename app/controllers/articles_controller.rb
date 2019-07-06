@@ -17,6 +17,8 @@ class ArticlesController < ApplicationController
 
   def create
      @article = Article.new(article_params)
+     @article.author = current_user.username
+     @article.save
     if @article.save
       redirect_to @article #Происходит на стороне браузера
     else
@@ -48,6 +50,6 @@ class ArticlesController < ApplicationController
 private
 
   def article_params
-    params.require(:article).permit(:title, :text)  
+    params.require(:article).permit(:title, :text, :author)  
   end
 end

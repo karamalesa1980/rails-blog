@@ -7,17 +7,65 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link data-require="bootstrap@*" data-semver="4.1.3" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script data-require="bootstrap@*" data-semver="4.1.3" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      <span>Здравствуйте, <%= current_user.username %></span>
-      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-    <% end %>
-    <%= yield %>
+
+
+    <div class="container">
+      
+      
+        
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          
+          
+          <div class="row">
+            <% if user_signed_in? %>
+            <div class="col-xs-8 col-md-8 col-sm-8">
+               <p>
+                  <%= link_to 'Все статьи', articles_path(@articles) %> |
+                  <%= link_to 'Новая статья', new_article_path(@article) %> | 
+                  <%= link_to 'Terms', terms_path %> |
+                  <%= link_to 'About', about_path %> |
+                  <%= link_to 'Профиль', user_root_path %>
+               </p>
+            </div>  
+            <div class="col-xs-4 col-md-4 col-sm-4">
+              <span>Здравствуйте, <%= current_user.username %></span>
+              <button type="button" class="btn btn-light navbar-btn">
+
+                <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+              </button>
+            
+            </div><!--col-->
+
+          <% else %>
+          
+          <div class="col-xs-8 col-md-8 col-sm-8">
+          </div>
+          <div class="col-xs-4 col-md-4 col-sm-4">  
+          <button type="button" class="btn btn-light navbar-btn">
+
+            <%= link_to 'Войти', new_user_session_path %></button> или
+            <button type="button" class="btn btn-light navbar-btn">
+
+              <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+            </button>
+          </div> 
+          
+          <% end %>
+          
+           </div><!--row-->
+
+          <%= yield %>
+
+      
+   
+  </div> <!-- container-->
   </body>
 </html>

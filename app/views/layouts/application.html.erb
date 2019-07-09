@@ -28,7 +28,7 @@
             <% if user_signed_in? %>
             <div class="col-xs-8 col-md-8 col-sm-8">
                <p>
-                  <%= link_to 'Все статьи  ', articles_path(@articles) %>   |
+                  <%= link_to 'Все статьи', articles_path(@articles) %>   |
                   <%= link_to 'Новая статья', new_article_path(@article) %>   | 
                   <%= link_to 'Terms', terms_path %>   |
                   <%= link_to 'About', about_path %>   |
@@ -54,7 +54,7 @@
             <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-success' %> или
             
 
-            <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-light' %>
+            <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-warning' %>
             
           </div> 
           

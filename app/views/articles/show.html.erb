@@ -21,9 +21,12 @@
 </p>
 <p>
 	<%= link_to 'Все статьи', articles_path(@articles), :class => 'btn btn-info' %> 
+	<% if user_signed_in? %>
 	<% if current_user.username == @article.author %>
     	<%= link_to 'Редактировать', edit_article_path(@article), :class => 'btn btn-success' %> 
 		<%= link_to 'Удалить', article_path(@article), method: :delete, data: { confirm: 'Вы уверены?'}, :class => 'btn btn-danger' %> 
+
+	<% end %>
 	<% end %>
 </p>
 

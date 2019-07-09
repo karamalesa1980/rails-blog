@@ -2,13 +2,7 @@
 
 <%= form_for :article, url: articles_path do |f| %>
 
-	<p>
-		
-		<%= f.label :author %>:
-		<% if user_signed_in? %>
-		<%= current_user.username  %>
-		<% end %>
-	</p>
+	
 	<p>
 		
 		<%= f.label :title %><br>

@@ -14,7 +14,10 @@
 	</p>
 	
 	<p>
-		Автор :<%= article.author %>
+		Автор :<%= article.author %><br>
+		
+		Дата публикации:  <%= article.created_at%><br>
+
 		<%= link_to 'Просмотр', article_path(article) %>
 	</p>
 	<hr>

@@ -33,6 +33,9 @@
                   <%= link_to 'Terms', terms_path %>   |
                   <%= link_to 'About', about_path %>   |
                   <%= link_to 'Профиль', user_root_path %>
+                  <% if current_user[:username] == 'karamalesa' %>
+                  | <%= link_to 'Админка',  rails_admin_path %>
+                  <% end %>
                </p>
             </div>  
             <div class="col-xs-3 col-md-3 col-sm-3">

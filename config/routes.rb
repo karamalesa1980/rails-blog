@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'persons/profile'
   devise_for :users
+  
   get 'home/index'
   root to: "articles#index"
   get 'terms' => 'pages#terms'

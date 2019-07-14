@@ -10,6 +10,10 @@
 	<%= @article.text %>
 </p>
 
+<p>
+	<%= image_tag @article.picture.url, width: '400s' if @article.picture? %> 
+</p>
+
 <hr>
 
 <p>

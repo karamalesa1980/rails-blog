@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 # Вывод всех статей
   def index
     @articles = Article.all
+    
   end
 
 
@@ -58,6 +59,6 @@ class ArticlesController < ApplicationController
 private
 
   def article_params
-    params.require(:article).permit(:title, :text, :author)  
+    params.require(:article).permit(:title, :text, :author, :picture)  
   end
 end

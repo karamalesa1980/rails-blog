@@ -15,7 +15,8 @@
 	<p>
 		
 		
-		<%= image_tag @article.picture.url, width: '400' %>
+		<%= image_tag @article.picture.url, width: '400' if @article.picture? %><br>
+		
 	</p>
 	<p>
 		

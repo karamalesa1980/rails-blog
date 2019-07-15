@@ -3,8 +3,9 @@ class ArticlesController < ApplicationController
 
 # Вывод всех статей
   def index
-    @articles = Article.all
     
+    @articles = Article.all
+
   end
 
 

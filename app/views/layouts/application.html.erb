@@ -14,61 +14,67 @@
   </head>
 
   <body>
-
-
-    <div class="container">
+<div class="container-fuild">
+    <nav class="navbar navbar-default">
+    
       
       
-        
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
           
           
-          <div class="row">
+            
+         
+          
+          
+  
             <% if user_signed_in? %>
-            <div class="col-xs-8 col-md-8 col-sm-8">
-               <p>
-                  <%= link_to 'Все статьи', articles_path(@articles) %>   |
-                  <%= link_to 'Новая статья', new_article_path(@article) %>   | 
-                  <%= link_to 'Terms', terms_path %>   |
-                  <%= link_to 'About', about_path %>   |
-                  <%= link_to 'Профиль', user_root_path %>
+            
+               
+
+                  <%= link_to 'Все статьи', articles_path(@articles), :class => 'btn btn-primary' %>
+                  <%= link_to 'Новая статья', new_article_path(@article), :class => 'btn btn-primary' %>
+                  <%= link_to 'Terms', terms_path, :class => 'btn btn-primary' %>
+                  <%= link_to 'About', about_path, :class => 'btn btn-primary' %>
+                  <%= link_to 'Профиль', user_root_path, :class => 'btn btn-primary' %>
                   <% if current_user[:username] == 'karamalesa' %>
-                  | <%= link_to 'Админка',  rails_admin_path %>
+                   <%= link_to 'Админка',  rails_admin_path, :class => 'btn btn-primary' %>
                   <% end %>
-               </p>
-            </div>  
-            <div class="col-xs-3 col-md-3 col-sm-3">
+                 
+            
+          
+            
               <span>Здравствуйте, <%= current_user.username %> </span>
-            </div> 
-            <div class="col-xs-1 col-md-1 col-sm-1">  
-                <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-              
             
-            </div><!--col-->
-
+            <div>  
+                <%= link_to 'Выйти', destroy_user_session_path, method: :delete, :class => 'btn btn-danger' %>
+           
           <% else %>
-          
-          <div class="col-xs-8 col-md-8 col-sm-8">
-          </div>
-          <div class="col-xs-4 col-md-4 col-sm-4">  
-          
-
-            <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-success' %> или
+          <div class="row">
+            <div class="col-md-10 col-lg-10 col-sm-10">
+              <p>
+                <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-warning' %>
+                 
+              </p>
+            </div> 
+            <div class="col-md-2 col-sm-2 col-lg-2"> 
+              <p>
+              <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-success' %>
+              </p>
+            </div>  
+          </div> <!--row-->
             
-
-            <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-warning' %>
-            
-          </div> 
+          
           
           <% end %>
           
-           </div><!--row-->
+           </nav>
+           </div> <!-- container-->
+        
 
           <%= yield %>
 
-      
+      <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
    
-  </div> <!-- container-->
+
   </body>
 </html>

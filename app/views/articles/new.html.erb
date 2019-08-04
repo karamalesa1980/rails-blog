@@ -11,8 +11,9 @@
 	<p>
 		
 		<%= f.label :text %><br>
-		<%= f.hidden_field :text, id: :article_text, :class => 'form-control' %>
-		<trix-editor input="article_text"></trix-editor>
+		<!--<%= f.hidden_field :text, id: :article_text, :class => 'form-control' %>
+		<trix-editor input="article_text"></trix-editor>-->
+		<%= f.text_area :text, rows: 5, cols: 25, :class => "tinymce" %>
 	</p>
 	<p>
 		
@@ -24,3 +25,4 @@
 		<%= f.submit "Опубликовать", :class => 'btn btn-primary' %>
 	</p>
 <% end %>
+<%= tinymce %>

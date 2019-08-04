@@ -1,4 +1,4 @@
-<h1>Contacts</h1>
+<h1>Оставьте свое сообщение и мы с вами свяжемся!</h1>
 
 <%= form_for :contact, url: contacts_path do |f| %>
 
@@ -12,15 +12,18 @@
 	<p>
 		
 		<%= f.label :email %><br>
-		<%= f.text_field :email %>
+		<%= f.text_field :email, :class => 'form-control' %>
+
 	</p>
 	<p>
 		
 		<%= f.label :message %><br>
-		<%= f.text_area :message %>
+		
+		<%= f.hidden_field :message, id: :contact_message, :class => 'form-control' %>
+		<trix-editor input="contact_message"></trix-editor>
 	</p>
 	<p>
 		
-		<%= f.submit 'Send message' %>
+		<%= f.submit 'Отправить сообщение', :class => 'btn btn-primary' %>
 	</p>
 <% end %>

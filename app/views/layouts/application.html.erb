@@ -14,55 +14,64 @@
   </head>
 
   <body>
-<div class="container-fuild">
+     <% if user_signed_in? %>
     <nav class="navbar navbar-default">
-    
-      
-      
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul class="nav nav-pills">
+                 <li role="presentation" class=""><%= link_to 'Все статьи', articles_path(@articles) %></li>
+                 <li role="presentation"><%= link_to 'Новая статья', new_article_path(@article) %></li>
+                 <li role="presentation"><%= link_to 'Terms', terms_path %></li>
+                 <li role="presentation"><%= link_to 'About', about_path %></li>
+                 <li role="presentation"><%= link_to 'Профиль', user_root_path %></li>
+                 <% if current_user[:username] == 'karamalesa' %>
+                   <li role="presentation"><%= link_to 'Админка',  rails_admin_path %> </li>
+                 <% end %> 
+                 <li role="presentation"><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
+              </ul>
+
+        </div>
+        <h2>Здравствуйте, <%= current_user.username %></h2>
           
-          
+      </div>
+    </nav>
+
+
+
+     
             
-         
-          
-          
-  
-            <% if user_signed_in? %>
             
                
-
-                  <%= link_to 'Все статьи', articles_path(@articles), :class => 'btn btn-primary' %>
+              
+                  <!--<%= link_to 'Все статьи', articles_path(@articles), :class => 'btn btn-primary' %>
+              
+                 
                   <%= link_to 'Новая статья', new_article_path(@article), :class => 'btn btn-primary' %>
+                 
                   <%= link_to 'Terms', terms_path, :class => 'btn btn-primary' %>
                   <%= link_to 'About', about_path, :class => 'btn btn-primary' %>
                   <%= link_to 'Профиль', user_root_path, :class => 'btn btn-primary' %>
                   <% if current_user[:username] == 'karamalesa' %>
                    <%= link_to 'Админка',  rails_admin_path, :class => 'btn btn-primary' %>
-                  <% end %>
-                 
+                  <% end %>-->
+           
             
-          
-            
-              <span>Здравствуйте, <%= current_user.username %> </span>
-            
-            <div>  
-                <%= link_to 'Выйти', destroy_user_session_path, method: :delete, :class => 'btn btn-danger' %>
+              
            
           <% else %>
-          <div class="row">
-            <div class="col-md-10 col-lg-10 col-sm-10">
-              <p>
-                <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-warning' %>
-                 
-              </p>
-            </div> 
-            <div class="col-md-2 col-sm-2 col-lg-2"> 
-              <p>
-              <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-success' %>
-              </p>
-            </div>  
-          </div> <!--row-->
-            
           
+            
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <ul class="nav nav-pills">
+                    <li role="presentation" class=""><%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'btn btn-warning' %></li>
+                    <li role="presentation"><%= link_to 'Войти', new_user_session_path, :class => 'btn btn-success' %></li>
+                  </ul>
+                   
+               </div>
+            </div>
+          </nav>
           
           <% end %>
           

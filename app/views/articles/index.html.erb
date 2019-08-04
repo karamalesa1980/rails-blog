@@ -12,6 +12,9 @@
 	<p>
 		<%= sanitize article.text %> <!-- скрывает в ... слишком длинный текст -->
 	</p>
+	<p>
+	<%= image_tag article.picture.url, width: '100s' if article.picture? %> 
+    </p>
 	
 	<p>
 		Автор :<%= article.author %><br>

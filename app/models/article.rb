@@ -8,6 +8,6 @@ class Article < ApplicationRecord
   default_scope { order("created_at DESC") }
 
   def subject
-    title
+    title 
   end  
 end

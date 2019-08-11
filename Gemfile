@@ -76,6 +76,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem "capybara"
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails', '~> 4.7'
+  gem "factory_bot_rails"
   gem 'pundit'
 end

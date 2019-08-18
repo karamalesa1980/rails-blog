@@ -5,7 +5,7 @@ FactoryBot.define do
 
 
        # создаём фабрику для создания статьи с несколькими комментариями
-    factory :article_with_comments do
+      factory :article_with_comments do
         # после создания article
         after :create do |article, evaluator|
           # создаём список из 3-х комментариев

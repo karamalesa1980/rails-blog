@@ -7,3 +7,4 @@ RSpec.describe Comment, type: :model do
     it { should validate_length_of(:body).is_at_most(4000) }
   end
 end
+ 

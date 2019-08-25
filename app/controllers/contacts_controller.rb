@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+
+before_action :authenticate_user!, :only => [:create]
+
   def new
     
   end

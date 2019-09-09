@@ -12,15 +12,15 @@
 	<p>
 		
 		<%= f.label :email %><br>
-		<%= f.text_field :email, :class => 'form-control' %>
+		<%= f.text_field :email, id: :contact_email, :class => 'form-control' %>
 
 	</p>
 	<p>
 		
 		<%= f.label :message %><br>
-		
-		<%= f.hidden_field :message, id: :contact_message, :class => 'form-control' %>
-		<trix-editor input="contact_message"></trix-editor>
+		<!--f.hidden_field-->
+		<%= f.text_field :message, id: :contact_message, :class => 'form-control' %>
+		<!--<trix-editor input="contact_message"></trix-editor>-->
 	</p>
 	<p>
 		

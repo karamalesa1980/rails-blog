@@ -1,15 +1,9 @@
 require "rails_helper"
+require "support/session_helper"
 
 feature "Account Creation" do
   scenario "allows guest to create account" do
-    visit new_user_registration_path
-
-    fill_in :user_email, with: 'popo@gmail.com'
-    fill_in :user_username, with: 'Popo'
-    fill_in :user_password, with: 'qwerty'
-    fill_in :user_password_confirmation, with: 'qwerty'
-
-    click_button 'Sign up'
+    sign_up
     expect(page).to have_content I18n.t('devise.registrations.signed_up')
 
     visit new_contacts_path

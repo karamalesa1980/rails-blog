@@ -1,5 +1,5 @@
 require "rails_helper"
-require "support/session_helper"
+
 
 
 feature "Contact creation" do

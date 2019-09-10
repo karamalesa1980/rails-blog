@@ -1,5 +1,5 @@
 require "rails_helper"
-require "support/session_helper"
+
 
 feature "Account Creation" do
   scenario "allows guest to create account" do

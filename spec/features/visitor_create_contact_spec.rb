@@ -8,7 +8,7 @@ feature "Contact creation" do
       visit new_contacts_path
       
   
-      expect(page).to have_content  I18n.t 'contacts.contact_us'
+      expect(page).to have_content  I18n.t('contacts.contact_us')
     end
 
     scenario "allows a guest to create contact" do

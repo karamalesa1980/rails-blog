@@ -12,7 +12,7 @@ feature "Article Creation" do
     visit new_article_path
     
     
-    expect(page).to have_content 'New Article'
+    expect(page).to have_content I18n.t('article.new_article')
   end
   
 end 

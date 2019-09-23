@@ -1,16 +1,16 @@
 
           
 <h1>Все статьи:</h1>
-<hr>
+
 
 
 <% @articles.each do |article| %>
 	
-	<h3>
+	<!--<h3>
 		<%= article.title %>
 	</h3>
 	<p>
-		<%= sanitize article.text %> <!-- скрывает в ... слишком длинный текст -->
+		<%= sanitize article.text %>  скрывает в ... слишком длинный текст 
 	</p>
 	<p>
 	<%= image_tag article.picture.url, width: '100s' if article.picture? %> 
@@ -21,8 +21,23 @@
 		
 		Дата публикации:  <%= article.created_at%><br>
 
-		<%= link_to 'Просмотр', article_path(article) %>
-	</p>
-	<hr>
+		<%= link_to 'Просмотр', article_path(article) %> 
+	</p>-->
+	
+	
+	<article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="<%= persons_profile_path %>"><%= article.author %></a>
+              <small class="text-muted"><%= article.created_at%></small>
+            </div>
+            <h2><a class="article-title" href="<%= article_path(article) %>"><%= article.title %></a></h2>
+            <p class="article-content"><%= sanitize article.text %></p>
+            <p>
+				<%= image_tag article.picture.url, width: '100s' if article.picture? %> 
+    		</p>
+          </div>
+    </article>
+        
 <% end %>	 
 

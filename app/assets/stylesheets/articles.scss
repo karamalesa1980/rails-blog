@@ -1,11 +1,13 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  background: #fafafa;
+.body {
+  background: #E6E9CE;
   color: #333333;
-  margin-top: 5rem;
+  
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
@@ -27,12 +29,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+.navbars {
+  background: #ffffff;
+  padding: 10px 20px;
+  //border: 2px solid #dddddd;
+  border-radius: 8px;
+  height: 500px;
+  
+  
+}
+
+
+
+.navbars-top {
+  background: #629700;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  a {
+    color: #ffffff;
+  }
+  
+}
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
-  border: 2px solid #dddddd;
+  //border: 2px solid #dddddd;
   border-radius: 8px;
+  //margin: 4px 4px 4px 4px;
+  //margin-bottom: 20px;
+}
+
+.content-border {
+  background: #36e90a;
   margin-bottom: 20px;
+  padding: 4px;
+  border-radius: 8px;
+  border: 2px solid #619701;
+}
+
+.navbars-border {
+  background: #36e90a;
+  margin-bottom: 20px;
+  padding: 4px;
+  border-radius: 8px;
+  border: 2px solid #619701;
+  
 }
 
 .article-title {
@@ -46,6 +91,7 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
+  color: #560505;
 }
 
 .article-img {
@@ -57,7 +103,8 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 2px solid #A8C2CF
+  
 }
 
 .article-metadata a:hover {
@@ -80,4 +127,14 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.footer {
+  background: #629700;
+  padding: 10px 20px;
+  border: 2px solid #619701;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 50px;
+  
 }

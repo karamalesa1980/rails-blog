@@ -11,11 +11,20 @@
     <link data-require="bootstrap@*" data-semver="4.1.3" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
     <script data-require="bootstrap@*" data-semver="4.1.3" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link href="/public/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.sticky.js"></script>
+    <script>    $(window).load(function(){
+      $("#header").sticky({ topSpacing: 0 });
+    });
+ </script>
   </head>
 
   <body class='body'>
      <% if user_signed_in? %>
+     <div class="scrol">
      <div class="container">
+     <div class="navback">
       <div class="navbars-top"> 
         <div class="row">
           <div class="col-md-8">
@@ -43,8 +52,9 @@
           </div>  
         </div>
       </div>
+      </div>
     </div>
-
+</div>
 
 
      
@@ -102,15 +112,8 @@
             </div>
             </div>
 
-            <div class="navbars-border">
-            <div class="navbars">
-              <div>
-                <a href="https://github.com/karamalesa1980">My Github</a>
-              </div>
-             
-            <a>New</a>
-            </div>
-            </div>
+            
+            
           </div>
         
         <div class="col-md-9">

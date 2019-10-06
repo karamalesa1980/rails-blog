@@ -29,14 +29,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+
 .navbars {
   background: #ffffff;
   padding: 10px 20px;
   //border: 2px solid #dddddd;
   border-radius: 8px;
-  height: 500px;
-  
-  
+  height: 444px;
+  font-family: Droid Sans;
+  font-size: 18px;
 }
 
 
@@ -48,13 +49,20 @@ h1, h2, h3, h4, h5, h6 {
   //border: 2px solid #ffffff;
   box-shadow: 0 0 5px 3px #ffffff;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
   a {
     color: #ffffff;
   }
   
 }
+
+.navback {
+  background: #E6E9CE;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
@@ -67,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 .content-border {
   background: #36e90a;
   margin-bottom: 20px;
+  margin-right: 4px;
   //padding: 4px;
   border-radius: 8px;
   //border: 2px solid #619701;
@@ -80,7 +89,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   //border: 2px solid #619701;
   box-shadow: 0 0 5px #619701;
-
+  position: sticky;
+  top: 85px;
+  min-height: 2em;
+  
   
 }
 
@@ -143,3 +155,24 @@ a.article-title:hover {
   height: 50px;
   
 }
+
+.scrol {
+  // position:fixed;
+  // top:-5px; left:0;
+  // width:100%;
+  // padding:10px 0;
+  
+  // -moz-box-shadow: 5px 5px 20px #333;
+  // -webkit-box-shadow: 5px 5px 20px #333;
+  // box-shadow: 5px 5px 20px #333;
+
+   
+  
+  position: sticky;
+  top: 10px;
+  min-height: 2em;
+  z-index: 1030;
+}
+
+
+#header { font-family: Droid Sans; font-size: 18px; line-height: 1.6em; font-weight: bold; text-align: center; padding: 10px; text-shadow: 0 1px 1px rgba(0,0,0,.2); width:100%; box-sizing:border-box;}

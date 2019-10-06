@@ -45,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #629700;
   color: #ffffff;
   padding: 10px 20px;
-  border: 2px solid #ffffff;
+  //border: 2px solid #ffffff;
+  box-shadow: 0 0 5px 3px #ffffff;
   border-radius: 8px;
   margin-bottom: 20px;
   width: 100%;
@@ -66,17 +67,20 @@ h1, h2, h3, h4, h5, h6 {
 .content-border {
   background: #36e90a;
   margin-bottom: 20px;
-  padding: 4px;
+  //padding: 4px;
   border-radius: 8px;
-  border: 2px solid #619701;
+  //border: 2px solid #619701;
+  box-shadow: 0 0 5px #619701;
 }
 
 .navbars-border {
   background: #36e90a;
   margin-bottom: 20px;
-  padding: 4px;
+  //padding: 4px;
   border-radius: 8px;
-  border: 2px solid #619701;
+  //border: 2px solid #619701;
+  box-shadow: 0 0 5px #619701;
+
   
 }
 
@@ -132,7 +136,8 @@ a.article-title:hover {
 .footer {
   background: #629700;
   padding: 10px 20px;
-  border: 2px solid #619701;
+  //border: 2px solid #619701;
+  box-shadow: 0 0 5px 3px #ffffff;
   border-radius: 8px;
   margin-bottom: 20px;
   height: 50px;

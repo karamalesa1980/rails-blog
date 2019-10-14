@@ -23,11 +23,13 @@
   <body class='body'>
      <% if user_signed_in? %>
      <div class="scrol">
-     <div class="container">
+     <div class="container-fluid">
      <div class="navback">
-      <div class="navbars-top"> 
+      <div class="navbars-top">
+
         <div class="row">
-          <div class="col-md-8">
+
+          <div class="col-xs-11">
             <div class="navbar-header">
               <ul class="nav nav-pills">
                 <li role="presentation" class=""><%= link_to 'Все статьи', articles_path(@articles) %></li>
@@ -46,10 +48,28 @@
               
             </div>
           </div>
+          
 
-          <div class="col-md-4">
-            <h2 class="nav_padding">Здравствуйте, <%= current_user.username %></h2>
-          </div>  
+          <div class="col-xs-1">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <%= link_to user_root_path, id: "navbar-dropdown", :class => "nav-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+                  <%= image_tag user_avatar(current_user, 30), :class => "rounded-circle" %>
+                <% end %>
+                <div id="color-link">
+                <div class="dropdown-menu">
+                <% if current_user.admin? %>
+                    <%= link_to "Admin Area", rails_admin_path, :class => "dropdown-item" %>
+                <% end %>
+                  <%= link_to 'Settings', edit_user_registration_path, :class => "dropdown-item" %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
+                </div>
+                </div>
+              </li>
+            </ul>
+          </div> 
+
         </div>
       </div>
       </div>

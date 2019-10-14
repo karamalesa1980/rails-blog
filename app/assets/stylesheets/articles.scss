@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #cbd5db;
 }
 
+
 .site-header .navbar-nav .nav-link:hover {
   color: #ffffff;
 }
@@ -40,7 +41,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
-
+#color-link {
+  a {
+    color: #560505;
+  }
+}
 
 .navbars-top {
   background: #629700;
@@ -61,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #E6E9CE;
   margin-top: -10px;
   padding-top: 10px;
+  width: 100%;
 }
 
 .content-section {

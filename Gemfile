@@ -20,7 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'devise', '~> 4.2'
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'mini_magick', '~> 4.9', '>= 4.9.5'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
